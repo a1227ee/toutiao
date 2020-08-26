@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    urce.driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/toutiao?useOldAliasMetadataBehavior=true&useSSL=false&serverTimezone=GMT%2B8
+    password: 123456
+    username: root
+  servlet:
+    multipart:
+
+      max-file-size: 30MB
+      max-request-size: 30MB
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml

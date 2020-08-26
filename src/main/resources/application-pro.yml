@@ -1,0 +1,35 @@
+server:
+  port: 8082
+  tomcat:
+    max-threads: 1000
+
+
+
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  datasource:
+    urce.driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://60.205.228.32:3306/zzx?useOldAliasMetadataBehavior=true&useSSL=false&serverTimezone=GMT%2B8
+    password: zzx337653788
+    username: root
+    tomcat:
+      max-active: 1000
+      max-idle: 100
+      min-idle: 10
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+
+  session:
+    timeout: 1800s
+
+
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
